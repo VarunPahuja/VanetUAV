@@ -1,0 +1,23 @@
+dataset:
+  raw_dir: data/raw/MachineLearningCSV
+  processed_dir: data/processed
+  label_column: Label
+
+training:
+  task: binary   # binary | multiclass
+  test_size: 0.2
+  random_seed: 42
+
+federated:
+  num_clients: 20
+  rounds: 50
+  local_epochs: 1
+  batch_size: 128
+  learning_rate: 0.001
+
+attacks:
+  malicious_fraction: 0.2
+  attack_type: label_flip
+
+compression:
+  top_k: 0.1
